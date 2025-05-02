@@ -1,5 +1,5 @@
 ---
-output: html_document
+output: github_document
 ---
 
 <!-- badges: start -->
@@ -18,7 +18,7 @@ output: html_document
 )
 ```
 
-# `{GolemTestApp}` {.tabset}
+# `{GolemTestApp}` 
 This is a test app built using the `{golem}` package to demonstrate how to set-up a golem package, deployed on the CBR server, with the option to update data using a CRON job. It is by no means the only method, but is one that I have found to work so far.
 
 Golem is an R package built to be a helper in producing  production-grade Shiny applications. It provides a framework and helper functions for building Shiny applications that are modular, maintainable, and scalable. Because of that there is more that goes into the set-up of a golem package than a standard Shiny app. This app is designed to be a simple example of how to structure a golem package, including how to update data via a CRON job. 
@@ -58,6 +58,9 @@ You can launch the application by running:
 ```{r, eval = FALSE}
 GolemTestApp::run_app()
 ```
+
+Alternatively, the app can be run by accessing the dev/run_dev.R file. 
+
 ### Test updated data
  
 If you'd like to update via cron job, direct the cron job to the `data-raw/` folder where the file is saved and run code. The file should save & overwrite the existing data in the `data/` folder. If you'd like to run without a cron job, run code below to update data and then run_app() again.
@@ -84,6 +87,8 @@ Here is a brief starter guide for setting up a golem package hosted on CBR serve
 
 Most information and steps, including file structure for setting up a golem package can be found in the [Engineering Production-Grade Shiny Apps by  Colin Fay, Sébastien Rochette, Vincent Guyader and Cervan Girard](https://engineering-shiny.org/index.html). This is a brief overview of the steps I used to get started with a {Golem} package, including some tips for setting up a CRON job to update real-time data on the CBR servers.
 
+
+### Setting it up
 -  To set-up an app in R, follow [Chapter 8. Setting up for Success with {golem}](https://engineering-shiny.org/setting-up-for-success.html). A few helpful thoughts:
 
     -   Select name carefully, the package can be renamed later, but easier to do it right the first time.
@@ -97,9 +102,11 @@ knitr::include_graphics("inst/app/www/screenshot-R.png")
 
 -   Once set-up, begin to add components to build the shiny app following the recommendations, naming, and organization outlined in Chapter 8
 
--   Any packages that you want to include (such as `shinydashboardPlus` or `shinydashboard`) can be added to the package description and will be included in any future build, or prompt to install if not already installed. Golem does require package function calls for successful deployment (i.e., dplyr::filter() instead of just calling filter for anything outside baseR or shiny functions). Also, Golem, or any package build, recommends avoiding installing tidyverse and instead calling specific packages within the larger package such as calling tidyr, dplyr, or lubridate individually. This might seem silly but is important for keeping production package ready long-term. If using specific shortcut for tidyverse such as `%>%` , can add to description with `use_this::use_pipe()'`, or just use baseR and avoid the issue altogether.
+### Adding packages  
 
--   If using cron job to update data, steps include:
+- Any packages that you want to include (such as `shinydashboardPlus` or `shinydashboard`) can be added to the package description and will be included in any future build, or prompt to install if not already installed. Golem does require package function calls for successful deployment (i.e., dplyr::filter() instead of just calling filter for anything outside baseR or shiny functions). Also, Golem, or any package build, recommends avoiding installing tidyverse and instead calling specific packages within the larger package such as calling tidyr, dplyr, or lubridate individually. This might seem silly but is important for keeping production package ready long-term. If using specific shortcut for tidyverse such as `%>%` , can add to description with `use_this::use_pipe()'`, or just use baseR and avoid the issue altogether.
+
+### If using cron job to update data, steps include:
 
     1.  Create file in `data-raw/` to point cron job to update. Files within data-raw/ are included in the bundled final package, but are not run each time the app deploys and can be set to run based on need using a cron job. This file should save & overwrite the existing data in the `inst/app/data/` folder. 
 

@@ -30,14 +30,16 @@ Below are existing CBR shiny apps using a golem framework:
 - [HydroSurvDOYTEMP](https://cbr.washington.edu/shiny/HydroSurvDOYTEMP/)
 - [SARforecastDLM](https://cbr.washington.edu/shiny/SARforecastDLM/)
 
-All code supporting each app, can be found in repositories here: [https://github.com/Columbia-Basin-Research-CBR](https://github.com/Columbia-Basin-Research-CBR).
+All code supporting each app, can be found in repositories here: [https://github.com/Columbia-Basin-Research-CBR](https://github.com/Columbia-Basin-Research-CBR). (Must have access to CBR-organization to view)
 
 ## To view this app: 
 ### Installation
+If you've cloned the repo into Rstudio, you skip to run the code section.
 
-You can install the development version of `{GolemTestApp}` by downloading the bundled package:
+Otherwise, you can install the development version of `{GolemTestApp}` by downloading the bundled package:
 
 [Download GolemTestApp_0.0.0.9000.tar.gz](inst/app/www/GolemTestApp_0.0.0.9000.tar.gz)
+
 
 ```{r, eval=FALSE}
 # Once downloaded, you can install the package using the following code:

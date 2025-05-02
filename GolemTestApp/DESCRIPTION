@@ -1,0 +1,16 @@
+Package: GolemTestApp
+Title: Example Real Time Data Updates
+Version: 0.0.0.9000
+Authors@R: 
+    person("Chinook", "Salmon", , "Chinook@sea.com", role = c("aut", "cre"))
+Description: PKG_DESC.
+License: What license is it under?
+Imports: config, fresh, golem, here, magrittr, shiny,
+        shinydashboardPlus, usethis
+Encoding: UTF-8
+RoxygenNote: 7.3.2
+Depends: R (>= 3.5)
+NeedsCompilation: no
+Packaged: 2025-05-01 22:27:47 UTC; caitlinobrien
+Author: Chinook Salmon [aut, cre]
+Maintainer: Chinook Salmon <Chinook@sea.com>

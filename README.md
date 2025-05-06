@@ -40,7 +40,7 @@ CBR-organization to view)
 
 ### Installation
 
-If you’ve cloned the repo into Rstudio, you skip to run the code
+If you’ve cloned the repo into RStudio, skip to **Run** the code
 section.
 
 Otherwise, you can install the development version of `{GolemTestApp}`

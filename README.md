@@ -26,7 +26,7 @@ Below are existing CBR shiny apps using a golem framework:
 
 - [Hydro2HydroLCM real-time
   version](https://tigger.cbr.washington.edu/shiny/Hydro2HydroLCM/) this
-  version requires being signed into Big-IP Edge Client or see,
+  version requires being signed into Big-IP Edge Client
 - [Hydro2HydroLCM static
   version](https://cbr.washington.edu/shiny/Hydro2HydroLCM/)
 - [HydroSurvDOYTEMP](https://cbr.washington.edu/shiny/HydroSurvDOYTEMP/)

@@ -67,7 +67,7 @@ You can launch the application by running:
 GolemTestApp::run_app()
 ```
 
-Alternatively, the app can be run by accessing the dev/run_dev.R file.
+Alternatively, the app can be run by accessing the `dev/run_dev.R` file.
 
 ### Test updated data
 
